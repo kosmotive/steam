@@ -181,11 +181,11 @@ class TCPConnection(Connection):
 
 class WebsocketConnection(Connection):
 
-     def __init__(self):
-         super(WebsocketConnection, self).__init__()
-         self.ws = WSConnection(ConnectionType.CLIENT)
-         self.ssl_ctx = ssl.create_default_context(cafile=certifi.where())
-         self.event_wsdisconnected = event.Event()
+    def __init__(self):
+        super(WebsocketConnection, self).__init__()
+        self.ws = WSConnection(ConnectionType.CLIENT)
+        self.ssl_ctx = ssl.create_default_context(cafile=certifi.where())
+        self.event_wsdisconnected = event.Event()
 
     def _new_socket(self):
         self.raw_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
