@@ -95,14 +95,14 @@ class Connection(object):
 
 
 
-     def _connect(self, server_addr):
-         raise TypeError("{}: _connect is unimplemented".format(self.__class__.__name__))
+    def _connect(self, server_addr):
+        raise TypeError("{}: _connect is unimplemented".format(self.__class__.__name__))
 
-     def _reader_loop(self):
-         raise TypeError("{}: _reader_loop is unimplemented".format(self.__class__.__name__))
+    def _reader_loop(self):
+        raise TypeError("{}: _reader_loop is unimplemented".format(self.__class__.__name__))
 
-     def _writer_loop(self):
-         raise TypeError("{}: _writer_loop is unimplemented".format(self.__class__.__name__))
+    def _writer_loop(self):
+        raise TypeError("{}: _writer_loop is unimplemented".format(self.__class__.__name__))
 
 
 class TCPConnection(Connection):
