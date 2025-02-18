@@ -249,7 +249,7 @@ class WebsocketConnection(Connection):
             elif isinstance(event, wsevents.RejectConnection):
                 logger.debug("WebSocket connection was rejected. That's probably not good.")
             elif isinstance(event, wsevents.TextMessage):
-            logger.debug("Received websocket text message of length: {}".format(len(event.data)))
+                logger.debug("Received websocket text message of length: {}".format(len(event.data)))
             elif isinstance(event, wsevents.BytesMessage):
                 logger.debug("Received websocket bytes message of length: {}".format(len(event.data)))
                 self.recv_queue.put(event.data)
